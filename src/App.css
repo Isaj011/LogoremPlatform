@@ -1,38 +1,316 @@
-.App {
-  text-align: center;
+
+.signin{
+  position: absolute;
+  width: 70%;
+  display: flex;
+  height: 80%;
+  left: 15%;
+  top: 128px;
+
+  background: #FFFFFF;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.overlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(200, 191, 191, 0.8);
+  position: absolute;
+  z-index: 1000;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.signin__left{
+  max-width: 900px;
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+
+  background: #F6F6F6;
+}
+.signin__left-logo{
+  width: 150px;
+  display: inline-block;
+  height: 115px;
+  margin-top: 60px;
+  margin-left: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.signin__left-logo img{
+  width: 60%;
+  display: inline-block;
+}
+.signin__left-logo h4{
+  width: 30%;
+  display: inline-block;
+  padding-left: 15px;
+  padding-bottom: 15px;
+
+
+}
+.signin__left-content{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 80%;
+  align-items: center;
+
+}
+.signin__left-content h1{
+
+  /* margin: 1px 420px ; */
+  font-family: 'Poppins';
+  align-self: flex-start;
+  padding-left: 12%;
+  font-size: 62px;
+  text-align: justify;
+  
+  font-weight: bold;
+  color: #393939;
 }
 
-.App-link {
-  color: #61dafb;
+ #form{
+  padding: 0 60px;
+  margin-right: 60px;
+  width: 60%;
+  height: 80%;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+.form__input-wrap{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  
+}
+
+
+#form__input{
+  width: 400px;
+  padding: 15px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+
+ .checkbox{
+  width: 180px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+
+#input__label{
+  font-size: 20px;
+  width: 350px;
+  color: gray;
+
+  display: inline-block; 
+}
+.small__label{
+  font-size: 16px;
+}
+
+
+ #button__primary{
+  width: 70%;
+  height: 50px;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center ;
+  color: #fff;
+  border: none;
+  display: block;
+  background: #F35D5D;
+  border-radius: 5px;
+}
+
+
+.small-btn{
+  font-size: 14px;
+  text-align: center;
+  width: 90%;
+  cursor: pointer;
+  margin-bottom: 150px;
+}
+
+#error__message{
+  font-size: 12px;
+  width: 300px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+#form__input:invalid[focused="true"] ~ #error__message{
+  display: block;
+}
+
+
+.signin__right{
+  border-radius: 10px;
+  width: 40%;
+  height: 100%;
+  background-image: url('./img/data.png');
+  background-repeat: no-repeat;
+  background-size:contain ;
+  background-position: center;
+  
+}
+
+
+
+
+ 
+
+ 
+.login__verify{
+  text-align: center;
+  /* z-index: 2000; */
+  height: 489px;
+  width: 321px;
+  position: absolute;
+  left: 58%;
+  right: 20%;
+  top: 40.83%;
+  background: #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.login__verify h3,h2{
+  font-size: 16px;
+  padding-top: 40px;
+  line-height: 0.5;
+}
+.login__verify .close-btn{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.login__verify #otp , .qr__code{
+  display: block;
+  width: 80%;
+  padding: 5px 7px;
+  margin: auto;
+  margin-bottom: 15px;
+  border: 1px solid #203060;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+
+#form__input{
+  width: 400px;
+  padding: 15px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.login__verify h2, h3{
+  margin-top: 20px;
+}
+
+.otp__btn{
+  margin: auto;
+  width: 90%;
+  cursor: pointer;
+  font-size: 2em;
+  text-align: center ;
+  color: #fff;
+  border: none;
+  display: block;
+  background: #F35D5D;
+  border-radius: 5px;
+
+}
+
+
+
+.loader{
+  position: absolute;
+  top: 60%;
+}
+
+.Toastify{
+  height: 50px;
+  width: 100px;
+}
+
+
+@media screen and (max-width:1200px){
+
+  .signin__left-content h1{
+    font-size: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  #form__input{
+    width: 300px;
   }
+  .signin__left-logo img{
+    width: 50%;
+    display: inline-block;
+    
+  }
+  
+}
+
+@media screen and (max-width:900px){
+  
+  .signin__left-content h1{
+    font-size: 35px;
+  }
+  .signin__right{
+    display: none;
+  }
+
+  #form__input{
+    width: 230px;
+  }
+  .signin__left-logo img{
+    width: 40%;
+    display: inline-block;
+    
+  }
+  
+}
+@media screen and (max-width:600px){
+  
+  .signin__left-content h1{
+    font-size: 30px;
+  }
+  .signin__right{
+    display: none;
+  }
+
+  #form__input{
+    width: 150px;
+  }
+  .signin__left-logo img{
+    width: 35%;
+    display: inline-block;
+    
+  }
+  .signin__left-logo {
+    width: 50%;
+    display: inline-block;
+    margin-left: 40px;
+    padding-top: 100px;
+
+    
+  }
+  
 }
